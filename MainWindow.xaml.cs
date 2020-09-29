@@ -55,7 +55,7 @@ namespace _2dGraph
             bms = new WriteableBitmap(size, size, 1, 1, PixelFormats.Rgb24, null);
             img_Picture.Source = bms;
             timer.Start();
-
+            //sd
 
             img_Picture.MouseDown += Click;
             img_Picture.MouseMove += Move;
