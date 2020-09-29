@@ -132,8 +132,6 @@ namespace _2dGraph
                 double x = ((double)jInt / size - offsetX) / scale;
                 double y = ((double)iInt / size - offsetY) / scale;
 
-                double opacity = 1;
-                bool firstTime = true;
                 for (int j = 0; j < steps; j++)
                 {
                     SdfResult res1 = SdfCircle(x, y, circle);
@@ -144,20 +142,6 @@ namespace _2dGraph
                     
                     double d = res.Distance;
                     double r = res.Circle.Radius;
-
-                    // if (firstTime){
-                    //     opacity = d <= r? 1 : 0;
-                    //     if(opacity == 0){
-
-                    //         double s = r * 4;
-                    //         double A = s - r;
-                    //         double B = d - r;
-                    //         double C = (A - B) / A;
-
-                    //         opacity = C < 0? 0 : C;
-                    //     }
-                    //     firstTime = false;
-                    // }
 
                     if (res.Distance <= 0.1)
                     {
